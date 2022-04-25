@@ -1,70 +1,164 @@
-# Getting Started with Create React App
+# Well Rox
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+## Well Rox App
 
-In the project directory, you can run:
+## Intro
 
-### `npm start`
+Well Rox is a full stack MERN app with Redux state management. Well Rox aims to create a great user experience for students, geologist, and engineers. Well logs can be loaded via .LAS or tff file, geologic formation tops picked, correlate a cross-section of multiple well logs and formation thickness, and create an isopach map. Well Rox is competitive enough to be used for commercial and academic resources. No GIS experience is necessary or used.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# SMEAC
+[Situation](#situation)
+[Mission](#mission)
+[Execution](#execution)
+[Admin and Logistics](#admin-and-logistics)
+[Command/Comm](#command)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Situation
+## Mission
+## Execution
+## Command/Comm
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Problem Statement
 
-### `npm run build`
+### The Well Rox solves several problems.
+- Houston we have a problem......when a geologist must become a software engineer to read a well log beyond traditional methods
+- The cost effective well logging software resources are unavailable to students and independent geologist.
+- There lacks an open source community for well log and geologic technologies to be utilized.
+- Often times enterprise software is proprietary and the data is formatted differently then LAS, creating more labor intensive work to translate the data.
+- Existing free software is inadequate, lacks positive user experience
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Features
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Loading .LAS files into a new Project is seamless
+- Translates tff files into LAS
+- Pick tops and thickness from well log data
+- Create cross-sections with well logs
+- Create an isopach map
+- Search bar for a well log or project
+## Design
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Figma
+Create a Project
+The well log
+-Geologic formation top picks(selected) for correlation
+-Gamma ray
+-Gas
+The cross-section
+-Correlating tops and thickness
+The Isopach Map
 
-### `npm run eject`
+## Project Management
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Trello
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## UX
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+SEARCH BAR FOR PROJECTS OR WELL LOGS
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+START PROJECT-Loads a blank new project
+EDIT PROJECT-Loads an existing project
+DELETE PROJECT-delete selected project
+SAVE PROJECT
+READ PROJECT-Print or download pdf
+WITHIN A PROJECT-Multiple well logs will live
 
-## Learn More
+LOAD LAS WELL LOG
+READ LAS WELL LOG INTO UI
+DELETE LAS WELL LOG
+SAVE LAS WELL LOG
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+CREATE A CUSTOM DATA STRUCTURE TO ACCESS LAS AND MAKE EDITS
+UPDATED CUSTOM DATA STRUCTURE BY TOP PICKS (ELEV), THICKNESS, LITHOLOGY, FAULT, FACIES
+TRANSLATE INTO CROSS SECTION CORRELATION BY LOCATION AND DEPTH
+TRANSLATE INTO ISOPACH
+-PRINT OR DOWNLOAD WELL LOG, CROSS-SECTION, OR ISOPACH MAP 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## ICEBOX
 
-### Code Splitting
+EXTRACT DATA INTO EXCEL??
+3D MODELING
+INTENSE DATA MINING/AI/PREDICTION
+CALCULATIONS PER WELL OR PROJECT?
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# UI
 
-### Analyzing the Bundle Size
+//Login in/out-Sign up page---this will not exist for demo
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Home Page includes:
+-dashboard
+nav links 
+- Home Link
+- Projects link
+- Well logs Link 
+- Search bar for a well log or project
+-map of wells loaded by projects from user, on hover tooltip meta data
+-well log on map clicked on will take you to the well log itself
 
-### Making a Progressive Web App
+Projects Page includes:
+-list of projects
+-start projects button
+-delete projects button
+-edit projects button
+-save projects button
+-all the well logs per project
+-google map of projects
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Well Log Page includes:
+-specific well log details
+-LAS file raw and user friendly
+-Download LAS button
 
-### Advanced Configuration
+FAQ Page includes:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Resource Page includes:
+-docs
+-geologic time scale
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Prototype Feedback Page- only for demo includes:
+form
 
-### `npm run build` fails to minify
+SCENARIO 1 Working with LAS
+STEPS
+LOCAL load a text las file
+BROWSER load a text las file
+FORMATTING
+-stringify it for json prep
+-eliminate white space and useless fields -map through
+-parse newly formatted string as json
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## USE
+
+## DB SCHEMA
+
+Mongoose Schema
+
+MongoDB
+
+## WORK
+### TFF TO LAS (Python??)
+
+### LAS CERTIFIED
+- Check if LAS is formatted correctly
+- LASIO?
+ 
+### LAS TO JSON
+SCENARIO 1 Working with LAS
+STEPS
+LOCAL load a text las file
+BROWSER load a text las file
+FORMATTING
+-stringify it for json prep
+-eliminate white space and useless fields -map through
+-parse newly formatted string as json
+### STATE
+set State with javascript array of objects
+map through for needed data for ui
+
+SCENARIO 2
+Working with photos/svg/tff.jpgs saved data to database/excel. If TFF is translated into LAS via python script then take it to scenario1
+
+
