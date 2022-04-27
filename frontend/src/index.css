@@ -13,3 +13,12 @@ body {
   margin: 0;
   box-sizing: border-box;
 }
+/* Got this off twitter */
+/* ------------------ */
+h1, h2, h3 {
+  line-height: 1.1;
+}
+p {
+  max-width: 60ch
+}
+/* ------------------ */
